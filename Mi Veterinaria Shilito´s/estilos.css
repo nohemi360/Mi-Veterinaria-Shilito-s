@@ -1,0 +1,662 @@
+/* ==========================================================================
+   VETERINARIA SHILITO'S - HOJA DE ESTILOS EXTERNA (estilos.css)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. VARIABLES DE COLOR Y ESTILOS GLOBALES
+   -------------------------------------------------------------------------- */
+:root {
+    --shilito-navy: #1A2B4C;
+    --shilito-blue: #2E5B88;
+    --shilito-sky: #4A90E2;
+    --shilito-light: #F0F4F8;
+    --shilito-accent: #FFD166;
+    --text-dark: #2D3748;
+    --text-muted: #718096;
+    --bg-white: #FFFFFF;
+    --border-color: #E2E8F0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F8FAFC;
+    color: var(--text-dark);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --------------------------------------------------------------------------
+   2. ENCABEZADO Y NAVEGACIÓN (HEADER & NAV)
+   -------------------------------------------------------------------------- */
+.header-principal {
+    background-color: var(--shilito-navy);
+    color: var(--bg-white);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-img {
+    height: 48px;
+    width: auto;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.logo-titulo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.nav-desktop {
+    display: none;
+    gap: 1.5rem;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: var(--shilito-accent);
+    transition: color 0.3s ease;
+}
+
+.btn-agendar-header {
+    background-color: var(--shilito-sky);
+    color: var(--bg-white);
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-agendar-header:hover {
+    background-color: var(--shilito-blue);
+}
+
+/* --------------------------------------------------------------------------
+   3. SECCIÓN HERO
+   -------------------------------------------------------------------------- */
+.hero-section {
+    background: linear-gradient(135deg, var(--shilito-navy), var(--shilito-blue));
+    color: var(--bg-white);
+    padding: 3rem 1rem;
+}
+
+.hero-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+}
+
+.hero-badge {
+    background-color: rgba(255, 209, 102, 0.2);
+    color: var(--shilito-accent);
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.hero-titulo {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-top: 0.5rem;
+}
+
+.hero-descripcion {
+    color: #E2E8F0;
+    max-width: 500px;
+    margin: 0.5rem auto 0 auto;
+}
+
+.hero-botones {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1.25rem;
+}
+
+.btn-primario {
+    background-color: var(--shilito-accent);
+    color: var(--shilito-navy);
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secundario {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+.hero-card-shiloh {
+    background-color: var(--bg-white);
+    padding: 1rem;
+    border-radius: 16px;
+    color: var(--text-dark);
+    max-width: 250px;
+    border: 4px solid rgba(74, 144, 226, 0.3);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.hero-card-img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 0.75rem;
+}
+
+.hero-card-shiloh h3 {
+    color: var(--shilito-navy);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.hero-card-shiloh p {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   4. SECCIÓN DE SERVICIOS Y DISPONIBILIDAD
+   -------------------------------------------------------------------------- */
+.main-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    flex-grow: 1;
+}
+
+.seccion-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.seccion-titulo {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--shilito-navy);
+}
+
+.seccion-subtitulo {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.servicio-card {
+    background-color: var(--bg-white);
+    padding: 1.5rem;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.servicio-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    color: var(--shilito-navy);
+}
+
+.servicio-card-header i {
+    font-size: 1.5rem;
+    color: var(--shilito-sky);
+}
+
+.servicio-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.servicio-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    background-color: #F8FAFC;
+    border-radius: 12px;
+}
+
+.servicio-nombre {
+    font-weight: 600;
+    display: block;
+}
+
+.servicio-desc {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* Banderas de disponibilidad */
+.badge-available {
+    background-color: #D1FAE5;
+    color: #065F46;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-weight: 700;
+}
+
+.badge-unavailable {
+    background-color: #FEE2E2;
+    color: #991B1B;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   5. FORMULARIO DE CITAS Y ANUNCIO DE DESCUENTO DINÁMICO
+   -------------------------------------------------------------------------- */
+.citas-container {
+    background-color: var(--shilito-light);
+    padding: 1.5rem;
+    border-radius: 24px;
+    border: 1px solid rgba(74, 144, 226, 0.2);
+}
+
+.form-citas {
+    background-color: var(--bg-white);
+    padding: 1.5rem;
+    border-radius: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.form-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.form-input, .form-select {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    outline: none;
+    font-size: 0.95rem;
+}
+
+.form-input:focus, .form-select:focus {
+    border-color: var(--shilito-sky);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/* Banner de descuento */
+.discount-banner {
+    background: linear-gradient(135deg, #F59E0B, #D97706);
+    color: var(--bg-white);
+    padding: 1rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.discount-banner.hidden {
+    display: none;
+}
+
+.discount-banner i {
+    font-size: 1.5rem;
+}
+
+.discount-banner h4 {
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.discount-banner p {
+    font-size: 0.75rem;
+}
+
+.btn-submit-cita {
+    background-color: var(--shilito-navy);
+    color: var(--bg-white);
+    padding: 0.8rem;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit-cita:hover {
+    background-color: var(--shilito-blue);
+}
+
+/* --------------------------------------------------------------------------
+   6. TARJETA VIRTUAL Y SHILOPUNTOS
+   -------------------------------------------------------------------------- */
+.puntos-container {
+    background-color: var(--bg-white);
+    padding: 1.5rem;
+    border-radius: 24px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.puntos-beneficios {
+    list-style: none;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.text-green {
+    color: #10B981;
+}
+
+.tarjeta-socio {
+    background: linear-gradient(135deg, var(--shilito-navy), var(--shilito-blue), var(--shilito-sky));
+    color: var(--bg-white);
+    padding: 1.5rem;
+    border-radius: 16px;
+    border: 2px solid rgba(255, 209, 102, 0.4);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta-socio-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.tarjeta-logo {
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid white;
+}
+
+.tarjeta-vip-badge {
+    font-size: 0.75rem;
+    font-family: monospace;
+    letter-spacing: 2px;
+    color: var(--shilito-accent);
+}
+
+.tarjeta-titular-label {
+    font-size: 0.75rem;
+    color: #CBD5E0;
+}
+
+.tarjeta-titular-nombre {
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.tarjeta-socio-footer {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.tarjeta-puntos-val {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--shilito-accent);
+}
+
+.btn-simular-puntos {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--bg-white);
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-simular-puntos:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* --------------------------------------------------------------------------
+   7. SECCIÓN DE CONTACTO Y FOOTER
+   -------------------------------------------------------------------------- */
+.contacto-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.contacto-card {
+    background-color: var(--bg-white);
+    padding: 1.5rem;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.contacto-card i {
+    font-size: 2rem;
+    color: var(--shilito-sky);
+    margin-bottom: 0.5rem;
+}
+
+.contacto-card h4 {
+    color: var(--shilito-navy);
+    font-weight: 700;
+}
+
+.contacto-card p {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.footer-principal {
+    background-color: var(--shilito-navy);
+    color: #A0AEC0;
+    font-size: 0.75rem;
+    padding: 1.5rem 1rem;
+    border-top: 1px solid var(--shilito-blue);
+    margin-top: auto;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-logo {
+    height: 24px;
+    border-radius: 4px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+/* --------------------------------------------------------------------------
+   8. CONSULTAS DE MEDIOS DE CSS (@media queries - DISEÑO RESPONSIVO)
+   -------------------------------------------------------------------------- */
+
+/* A. Vista Dispositivos Móviles en Posición Vertical (Portrait) */
+@media screen and (max-width: 639px) and (orientation: portrait) {
+    .hero-titulo {
+        font-size: 1.75rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .tarjeta-socio {
+        width: 100%;
+    }
+}
+
+/* B. Vista Dispositivos Móviles en Posición Horizontal (Landscape) */
+@media screen and (max-width: 900px) and (orientation: landscape) {
+    .header-principal {
+        position: relative; /* Evita tapar la pantalla corta en horizontal */
+    }
+
+    .hero-section {
+        padding: 1.5rem 1rem;
+    }
+
+    .hero-container {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .hero-card-shiloh {
+        display: none; /* Oculta tarjeta redundante para ahorrar espacio vertical */
+    }
+
+    .main-content {
+        gap: 2rem;
+    }
+}
+
+/* C. Vista Pantallas Medianas / Tablet (min-width: 640px) */
+@media (min-width: 640px) {
+    .servicios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contacto-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .puntos-container {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .puntos-info, .puntos-tarjeta-wrapper {
+        width: 50%;
+    }
+}
+
+/* D. Vista Pantallas de Escritorio (Desktop: min-width: 768px) */
+@media (min-width: 768px) {
+    .nav-desktop {
+        display: flex;
+    }
+
+    .hero-titulo {
+        font-size: 2.75rem;
+    }
+
+    .hero-container {
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-between;
+    }
+
+    .hero-descripcion {
+        margin: 0;
+    }
+
+    .hero-botones {
+        justify-content: flex-start;
+    }
+
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}

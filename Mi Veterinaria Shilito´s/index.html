@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria Shilito's - Cuidado con Amor</title>
+    <!-- Hoja de Estilos Externa CSS -->
+    <link rel="stylesheet" href="estilos.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO Y NAVEGACIÓN -->
+    <header class="header-principal">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="logo.1.png" alt="Logo Veterinaria Shilito's" class="logo-img">
+                <span class="logo-titulo">Veterinaria Shilito's</span>
+            </div>
+            <nav class="nav-desktop">
+                <a href="#servicios" class="nav-link">Servicios</a>
+                <a href="#citas" class="nav-link">Agendar Cita</a>
+                <a href="#puntos" class="nav-link">ShiloPuntos</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </nav>
+            <a href="#citas" class="btn-agendar-header">
+                <i class="fa-solid fa-calendar-check"></i> Agendar
+            </a>
+        </div>
+    </header>
+
+    <!-- SECCIÓN HERO -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-texto">
+                <span class="hero-badge">¡El mejor cuidado para tu mascota!</span>
+                <h1 class="hero-titulo">Bienvenido a Veterinaria Shilito's</h1>
+                <p class="hero-descripcion">Ofrecemos la mejor atención médica y servicios de estética para mantener a tus mascotas felices y saludables.</p>
+                <div class="hero-botones">
+                    <a href="#citas" class="btn-primario">
+                        <i class="fa-solid fa-paw"></i> Agendar Servicios
+                    </a>
+                    <a href="#puntos" class="btn-secundario">
+                        Ver Mis ShiloPuntos
+                    </a>
+                </div>
+            </div>
+            <div class="hero-card-wrapper">
+                <div class="hero-card-shiloh">
+                    <img src="logo.1.png" alt="Logo Shilito's" class="hero-card-img">
+                    <h3>Shiloh nos inspira</h3>
+                    <p>Calidad, cariño y la mejor tecnología veterinaria al servicio de tus peluditos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+
+        <!-- CATÁLOGO DE SERVICIOS Y DISPONIBILIDAD -->
+        <section id="servicios">
+            <div class="seccion-header">
+                <h2 class="seccion-titulo">Nuestros Servicios</h2>
+                <p class="seccion-subtitulo">Consulta los servicios médicos y de estética disponibles actualmente</p>
+            </div>
+
+            <div class="servicios-grid">
+                <!-- SERVICIOS MÉDICOS -->
+                <article class="servicio-card">
+                    <div class="servicio-card-header">
+                        <i class="fa-solid fa-user-nurse"></i>
+                        <h3>Servicios Médicos</h3>
+                    </div>
+                    <ul class="servicio-lista">
+                        <li class="servicio-item">
+                            <div>
+                                <span class="servicio-nombre">Chequeo General</span>
+                                <span class="servicio-desc">Revisión física completa y diagnósticos</span>
+                            </div>
+                            <span class="badge-available">Disponible</span>
+                        </li>
+                        <li class="servicio-item">
+                            <div>
+                                <span class="servicio-nombre">Esterilización</span>
+                                <span class="servicio-desc">Cirugía ambulatoria bajo cita previa</span>
+                            </div>
+                            <span class="badge-available">Disponible</span>
+                        </li>
+                        <li class="servicio-item">
+                            <div>
+                                <span class="servicio-nombre">Tratamientos Especializados</span>
+                                <span class="servicio-desc">Tratamiento para enfermedades crónicas</span>
+                            </div>
+                            <span class="badge-unavailable">Agotado Temporallmente</span>
+                        </li>
+                    </ul>
+                </article>
+
+                <!-- SERVICIOS DE ESTÉTICA -->
+                <article class="servicio-card">
+                    <div class="servicio-card-header">
+                        <i class="fa-solid fa-scissors"></i>
+                        <h3>Servicios de Estética</h3>
+                    </div>
+                    <ul class="servicio-lista">
+                        <li class="servicio-item">
+                            <div>
+                                <span class="servicio-nombre">Baño Sanitario y Medicado</span>
+                                <span class="servicio-desc">Incluye secado y cepillado especial</span>
+                            </div>
+                            <span class="badge-available">Disponible</span>
+                        </li>
+                        <li class="servicio-item">
+                            <div>
+                                <span class="servicio-nombre">Corte de Pelo y Peinado</span>
+                                <span class="servicio-desc">Estilos según la raza de tu mascota</span>
+                            </div>
+                            <span class="badge-available">Disponible</span>
+                        </li>
+                        <li class="servicio-item">
+                            <div>
+                                <span class="servicio-nombre">Corte de Uñas y Oídos</span>
+                                <span class="servicio-desc">Cuidado e higiene preventiva</span>
+                            </div>
+                            <span class="badge-available">Disponible</span>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- AGENDAR CITAS Y BANNER DE DESCUENTO DINÁMICO -->
+        <section id="citas" class="citas-container">
+            <div class="citas-wrapper">
+                <div class="seccion-header">
+                    <h2 class="seccion-titulo">Agendar Cita</h2>
+                    <p class="seccion-subtitulo">Selecciona tu servicio para consultar descuentos exclusivos</p>
+                </div>
+
+                <form id="appointmentForm" class="form-citas">
+                    <div class="form-group">
+                        <label class="form-label">Nombre del dueño</label>
+                        <input type="text" required placeholder="Ej. Nohemí González" class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Nombre de la mascota</label>
+                        <input type="text" required placeholder="Ej. Shiloh" class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Selecciona el Servicio</label>
+                        <select id="serviceSelect" class="form-select">
+                            <option value="">-- Selecciona un servicio --</option>
+                            <option value="chequeo">Chequeo General (Disponible)</option>
+                            <option value="esterilizacion">Esterilización (Disponible)</option>
+                            <option value="bano">Baño Medicado (Disponible)</option>
+                            <option value="corte">Corte de Pelo y Peinado (Disponible)</option>
+                            <option value="unas">Corte de Uñas / Oídos (Disponible)</option>
+                            <option value="tratamiento" disabled>Tratamientos Especializados (No disponible)</option>
+                        </select>
+                    </div>
+
+                    <!-- BANNER DINÁMICO DE DESCUENTO -->
+                    <div id="discountBanner" class="discount-banner hidden">
+                        <i class="fa-solid fa-tags"></i>
+                        <div>
+                            <h4 id="discountTitle">¡Oferta Especial!</h4>
+                            <p id="discountDesc">Aprovecha un beneficio exclusivo en tu cita agendada hoy.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Fecha</label>
+                            <input type="date" required class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Hora</label>
+                            <input type="time" required class="form-input">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-submit-cita">
+                        Confirmar Cita y Ganar Puntos
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- RECOMPENSAS SHILOPUNTOS -->
+        <section id="puntos" class="puntos-container">
+            <div class="puntos-info">
+                <span class="hero-badge">Club de Fidelidad</span>
+                <h2 class="seccion-titulo" style="text-align: left;">Programa "ShiloPuntos"</h2>
+                <p class="seccion-subtitulo" style="text-align: left;">Cada vez que agendes una cita o realices un servicio con nosotros, acumulas puntos canjeables por premios y servicios gratis.</p>
+                <ul class="puntos-beneficios">
+                    <li><i class="fa-solid fa-check text-green"></i> +50 Puntos por agendar cita en línea</li>
+                    <li><i class="fa-solid fa-check text-green"></i> 100 Puntos = Limpieza de uñas gratis</li>
+                    <li><i class="fa-solid fa-check text-green"></i> 250 Puntos = Baño medicado sin costo</li>
+                </ul>
+            </div>
+
+            <!-- TARJETA VIRTUAL DE SOCIO -->
+            <div class="puntos-tarjeta-wrapper">
+                <div class="tarjeta-socio">
+                    <div class="tarjeta-socio-header">
+                        <img src="logo.1.png" alt="Logo Shilito's" class="tarjeta-logo">
+                        <span class="tarjeta-vip-badge">VIP MEMBER</span>
+                    </div>
+                    <p class="tarjeta-titular-label">Titular del Club</p>
+                    <h4 class="tarjeta-titular-nombre">Nohemí González</h4>
+                    <div class="tarjeta-socio-footer">
+                        <div>
+                            <p class="tarjeta-titular-label">Puntos Acumulados</p>
+                            <span id="userPoints" class="tarjeta-puntos-val">150</span>
+                        </div>
+                        <button id="addPointsBtn" type="button" class="btn-simular-puntos">
+                            + Simular Puntos
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE CONTACTO -->
+        <section id="contacto" class="contacto-grid">
+            <div class="contacto-card">
+                <i class="fa-solid fa-location-dot"></i>
+                <h4>Ubicación</h4>
+                <p>Cadereyta Jiménez, N.L., México</p>
+            </div>
+            <div class="contacto-card">
+                <i class="fa-solid fa-phone"></i>
+                <h4>Teléfono</h4>
+                <p>+52 (81) 1234-5678</p>
+            </div>
+            <div class="contacto-card">
+                <i class="fa-solid fa-envelope"></i>
+                <h4>Correo Electrónico</h4>
+                <p>contacto@veterinariashilitos.com</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA (FOOTER) -->
+    <footer class="footer-principal">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="logo.1.png" alt="logo.1   " class="footer-logo">
+                <span>© 2026 Veterinaria Shilito's - Todos los derechos reservados.</span>
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacidad</a>
+                <a href="#">Términos del Servicio</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVIDAD JS -->
+    <script>
+        const discounts = {
+            chequeo: { title: "¡15% DE DESCUENTO EN TU PRIMERA CONSULTA!", desc: "Obtén un 15% de descuento en el chequeo general agendando hoy mismo." },
+            esterilizacion: { title: "¡INCLUYE KIT DE RECUPERACIÓN GRATIS!", desc: "Tu cita de esterilización incluye el primer cambio de vendaje de regalo." },
+            bano: { title: "¡DESCUENTO EN BAÑO SANITARIO!", desc: "Añade corte de uñas por solo $30 adicionales al agendar baño." },
+            corte: { title: "¡PROMO ESTÉTIKA PELUDITA!", desc: "10% de descuento en servicios de peinado estilizado." },
+            unas: { title: "¡OFERTA EXPRESS!", desc: "Servicio rápido de uñas y oídos con 20 ShiloPuntos de regalo." }
+        };
+
+        const serviceSelect = document.getElementById('serviceSelect');
+        const discountBanner = document.getElementById('discountBanner');
+        const discountTitle = document.getElementById('discountTitle');
+        const discountDesc = document.getElementById('discountDesc');
+        const appointmentForm = document.getElementById('appointmentForm');
+        const userPoints = document.getElementById('userPoints');
+        const addPointsBtn = document.getElementById('addPointsBtn');
+
+        let points = 150;
+
+        serviceSelect.addEventListener('change', (e) => {
+            const val = e.target.value;
+            if (discounts[val]) {
+                discountTitle.textContent = discounts[val].title;
+                discountDesc.textContent = discounts[val].desc;
+                discountBanner.classList.remove('hidden');
+            } else {
+                discountBanner.classList.add('hidden');
+            }
+        });
+
+        appointmentForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            points += 50;
+            userPoints.textContent = points;
+            alert('¡Cita registrada con éxito! Has acumulado +50 ShiloPuntos.');
+            appointmentForm.reset();
+            discountBanner.classList.add('hidden');
+        });
+
+        addPointsBtn.addEventListener('click', () => {
+            points += 20;
+            userPoints.textContent = points;
+        });
+    </script>
+</body>
+</html>
